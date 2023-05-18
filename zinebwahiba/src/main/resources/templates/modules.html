@@ -1,0 +1,88 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="/js/prof.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/proflistcss.css">
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+
+
+</head><!--  ****fin head***** -->
+
+
+<div class="topnav">
+    <a class="active" href="professeurs">Accueil</a>
+
+    <a href="foo">Les Filieres</a>
+    <a href="module">Les modules</a>
+    <a href="element">Les modalités</a>
+    <a href="affectation">Creer Compte professeur</a>
+
+
+</div> <!--  ****fin nav***** -->
+<br>
+<br>
+<br>
+<div class="container ">
+
+    <body> <!--  ****debut body***** -->
+
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+
+            <th scope="col">Modules</th>
+            <th scope="col">Elements</th>
+
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="e:${listemodule}">
+            <td th:text="${e.nom_module}"></td>
+            <td>
+            <li th:each="a:${e.elements}">
+                <span th:text="${a.nom_element}"></span>
+            </li>
+            </td>
+
+
+        </tr>
+
+
+        </tbody>
+    </table>
+
+
+    <!-- pagination elements -->
+    <div class="pagination_section">
+        <a href="#"><< Previous</a>
+        <a href="#" title="Algorithm">1</a>
+        <a href="#" title="DataStructure">2</a>
+        <a href="#" title="Languages">3</a>
+        <a href="#" title="Interview" class="active">4</a>
+        <a href="#" title="practice">5</a>
+        <a href="#">Next >></a>
+    </div>
+
+ </div>
+</body><!--  ****fin body***** -->
+
+</html>
